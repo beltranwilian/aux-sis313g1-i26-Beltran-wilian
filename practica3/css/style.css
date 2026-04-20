@@ -1,0 +1,175 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-main: #f1f5f9;
+    --bg-card: #ffffff;
+    --text-dark: #0f172a;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --flex-red: linear-gradient(135deg, #ef4444, #991b1b);
+    --flex-yellow: linear-gradient(135deg, #f59e0b, #b45309);
+    --flex-green: linear-gradient(135deg, #10b981, #065f46);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    min-height: 80vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.linea-decorativa {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.tarjeta-info {
+    background: var(--bg-main);
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 8px solid var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-grid p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.info-grid strong {
+    font-size: 1rem;
+    color: var(--text-dark);
+    display: block;
+}
+
+.grid-niveles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-nivel {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: bold;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-nivel:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.titulo-nivel {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--text-light);
+}
+
+.escenario {
+    background: #ffffff;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 30px 30px;
+    height: 450px;
+    display: flex;
+    border: 3px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    position: relative;
+}
+
+.caja {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
+    margin: 5px;
+}
+
+.caja:hover { transform: scale(1.05); }
+
+.rojo { background: var(--flex-red); }
+.amarillo { background: var(--flex-yellow); }
+.verde { background: var(--flex-green); }
+
+.botonera {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: 12px 35px;
+    background: var(--text-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-volver:hover { background: var(--primary-color); }
+
+.nivel-1  { justify-content: center; align-items: flex-start; }
+.nivel-2  { justify-content: flex-end; align-items: flex-start; }
+.nivel-3  { justify-content: flex-start; align-items: center; }
+.nivel-4  { justify-content: flex-start; align-items: flex-end; }
+.nivel-5  { justify-content: center; align-items: center; }
+.nivel-6  { justify-content: space-between; align-items: flex-end; }
+.nivel-7  { flex-direction: column; }
+.nivel-8  { flex-direction: row-reverse; justify-content: flex-start; }
+.nivel-9  { flex-direction: column; justify-content: center; }
+.nivel-10 { flex-direction: row-reverse; justify-content: center; align-items: center; }
+.nivel-11 { flex-direction: column-reverse; justify-content: center; align-items: center; }
