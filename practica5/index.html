@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 5 - wilian beltran centeno</title>
+</head>
+<body>
+    <h1>Preguntas Teóricas</h1>
+
+    <h2>1. Formas de conectar HTML con JavaScript</h2>
+    <p>La primera forma es interna, utilizando la etiqueta script directamente en el archivo HTML donde se escribe el código. Ejemplo:</p>
+    <pre>
+    &lt;script&gt;
+        alert("Hola Mundo");
+    &lt;/script&gt;
+    </pre>
+    <p>La segunda forma es externa, vinculando un archivo independiente con extensión .js mediante el atributo src de la etiqueta script. Ejemplo:</p>
+    <pre>
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+    </pre>
+
+    <h2>2. Paso a paso para visualizar resultados en la consola</h2>
+    <ol>
+        <li>Abrir el archivo HTML en cualquier navegador web.</li>
+        <li>Hacer clic derecho en cualquier parte de la página y seleccionar Inspeccionar, o presionar la tecla F12.</li>
+        <li>Hacer clic en la pestaña que dice Consola o Console en la ventana de herramientas de desarrollador.</li>
+        <li>Observar los resultados o mensajes generados por las instrucciones del código JavaScript.</li>
+    </ol>
+
+    <h2>3. Variables en JavaScript (var, let y const)</h2>
+    <p>Las variables son contenedores para almacenar datos. 'var' tiene un alcance de función o global y permite la redeclaración. 'let' tiene un alcance de bloque y no permite redeclarar en el mismo ámbito. 'const' tiene alcance de bloque y define valores constantes que no pueden ser reasignados.</p>
+    <pre>
+    var nombre = "leonardo";
+    let edad = 30;
+    const pi = 3.1416;
+    </pre>
+    <p>Actualmente ya no se recomienda utilizar 'var' porque su alcance global o de función suele causar errores lógicos al permitir duplicar nombres de variables sin advertencia, además de sufrir de elevación (hoisting) de manera impredecible.</p>
+
+    <script src="js/script.js"></script>
+
+
+
+    
+</body>
+</html>
